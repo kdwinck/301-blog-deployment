@@ -6,16 +6,13 @@
   // TODO: Refactor and simplify this ajax call into a get request
   // to the proxy end point provided by server.js.
   repos.requestRepos = function(callback) {
-    $.ajax({
-      url: 'https://api.github.com/users/brookr/repos' +
-            '?per_page=100' +
-            '&sort=updated',
-      type: 'GET',
-      headers: { 'Authorization': 'token ' + githubToken },
-      success: function(data, message, xhr) {
+    $.get('/github/users/kdwinck/repos' +
+          '?per_page=100' +
+          '&sort=updated')
+      .done(function(data) {
         repos.all = data;
-      }
-    }).done(callback);
+        callback();
+      });
   };
 
   repos.with = function(attr) {
