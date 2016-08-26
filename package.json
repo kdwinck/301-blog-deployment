@@ -9,7 +9,15 @@
   "author": "Code Fellows",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.3",
+    "express": "^4.14.0",
     "express-request-proxy": "^1.0.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdwinck/301-blog-deployment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kdwinck/301-blog-deployment/issues"
+  },
+  "homepage": "https://github.com/kdwinck/301-blog-deployment#readme"
 }
